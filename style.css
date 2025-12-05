@@ -38,6 +38,9 @@ img {
   --font-size-xl: 2rem;
   --font-size-2xl: 3rem;
   --font-size-3xl: 4rem;
+
+  --grid-container: [full-start] minmax(32px, 1fr) [inner-start]
+    minmax(0, 77.5rem) [inner-end] minmax(32px, 1fr) [full-end];
 }
 
 body {
@@ -88,6 +91,59 @@ h1 {
   }
 }
 
-body {
-  background-color: var(--color-dark-blue);
+/* HUVUDLAYOUT */
+.container {
+  display: grid;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: var(--grid-container);
+}
+
+.site-header__inner {
+  background-color: green; /*temporärt*/
+  grid-column: inner;
+}
+
+/* Site Header */
+
+.site-header {
+  height: 140px;
+  position: absolute; /*Ändra till fixed senare*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  .site-header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .branding {
+    color: var(--color-light);
+  }
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  .menu__list {
+    margin: 0; /*reset*/
+    padding: 0; /*reset*/
+    list-style: none; /*reset*/
+
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .menu__link {
+    text-decoration: none;
+    color: var(--color-light);
+  }
 }
