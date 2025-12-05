@@ -41,6 +41,8 @@ img {
 
   --grid-container: [full-start] minmax(32px, 1fr) [inner-start]
     minmax(0, 77.5rem) [inner-end] minmax(32px, 1fr) [full-end];
+
+  --header-height: 140px;
 }
 
 body {
@@ -96,20 +98,21 @@ h1 {
   display: grid;
 }
 
-.site-header {
+.site-header,
+.hero {
   display: grid;
   grid-template-columns: var(--grid-container);
 }
 
-.site-header__inner {
-  background-color: green; /*temporärt*/
+.site-header__inner,
+.hero__inner {
   grid-column: inner;
 }
 
 /* Site Header */
 
 .site-header {
-  height: 140px;
+  height: var(--header-height);
   position: absolute; /*Ändra till fixed senare*/
   top: 0;
   left: 0;
@@ -145,5 +148,17 @@ h1 {
   .menu__link {
     text-decoration: none;
     color: var(--color-light);
+  }
+}
+
+/* Hero */
+
+.hero {
+  background-color: var(--color-dark-blue);
+  min-height: 100vh;
+  padding-top: var(--header-height);
+
+  .hero__inner {
+    padding: 5rem 0;
   }
 }
