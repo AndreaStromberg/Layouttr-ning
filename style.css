@@ -110,14 +110,16 @@ p {
 
 .site-header,
 .hero,
-.features {
+.features,
+.stats {
   display: grid;
   grid-template-columns: var(--grid-container);
 }
 
 .site-header__inner,
 .hero__inner,
-.features__inner {
+.features__inner,
+.stats__inner {
   grid-column: inner;
 }
 
@@ -279,6 +281,72 @@ p {
     }
 
     .card__text {
+    }
+  }
+}
+
+/* Stats */
+
+.stats {
+  .stats__inner {
+    padding: var(--spacing-section) 0;
+    display: grid;
+    gap: 4rem;
+  }
+
+  .stats__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    /* samma gap som i rutnätet under för att få exakt samma linje på innehållet */
+    gap: 1rem;
+  }
+
+  .stats__title {
+    max-width: 30rem;
+    font-size: var(--font-size-2xl);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .stats__desc {
+    margin: 0;
+    max-width: 31.25rem;
+  }
+
+  .stats__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+.stat {
+  background-color: var(--color-light-grey);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+  gap: 0.5rem;
+
+  .stat__data {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-dark);
+  }
+
+  &:nth-child(4) {
+    grid-row: span 2;
+    background-color: var(--color-accent);
+    color: var(--color-light);
+
+    .stat__data {
+      color: var(--color-light);
     }
   }
 }
