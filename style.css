@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 html,
@@ -43,10 +44,14 @@ img {
     minmax(0, 77.5rem) [inner-end] minmax(32px, 1fr) [full-end];
 
   --header-height: 140px;
+
+  /* avstånd som ska vara i toppen och botten på varje sektion */
+  --spacing-section: 6.5rem;
 }
 
 body {
   font-family: var(--font-family-2);
+  color: var(--color-grey);
 }
 
 h1,
@@ -57,10 +62,15 @@ h5,
 h6 {
   font-family: var(--font-family-1);
   font-weight: bold;
+  color: var(--color-dark);
 }
 
 h1 {
   font-weight: 600;
+}
+
+p {
+  line-height: 1.5;
 }
 
 /* KOMPONENTER */
@@ -99,13 +109,15 @@ h1 {
 }
 
 .site-header,
-.hero {
+.hero,
+.features {
   display: grid;
   grid-template-columns: var(--grid-container);
 }
 
 .site-header__inner,
-.hero__inner {
+.hero__inner,
+.features__inner {
   grid-column: inner;
 }
 
@@ -160,5 +172,113 @@ h1 {
 
   .hero__inner {
     padding: 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    /* space-between gör att boxarna i hero__inner hamnar så långt ifrån varandra som det går. Gap garanterar att det alltid är minst 5rem mellanrum, och att boxarna förminstkar sig istället om utrymmet är litet.  */
+    justify-content: space-between;
+    gap: 5rem;
+
+    align-items: center;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    max-width: 640px;
+    width: 100%;
+    color: var(--color-light);
+    padding-bottom: 5rem;
+  }
+
+  .hero__image {
+    background-color: var(--color-placeholder);
+
+    /* inställningar för att bilden ska vara max 504px men alltid breda ut sig så mycket det går */
+    max-width: 504px;
+    width: 100%;
+    aspect-ratio: 5/6;
+
+    /* Överkurs för att vara säker på att bilder man lägger in i placeholdern täcker och får rätt dimensioner */
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .hero__title {
+    font-size: var(--font-size-3xl);
+    color: var(--color-light);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .hero__desc {
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    font-family: var(--font-family-1);
+    margin: 0;
+  }
+
+  .hero__buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* Features */
+
+.features {
+  .features__inner {
+    padding: var(--spacing-section) 0;
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .features__top {
+  }
+
+  .features__title {
+    max-width: 30rem;
+    font-size: var(--font-size-2xl);
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .features__desc {
+    max-width: 26rem;
+  }
+
+  .features__cards {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .features__cta {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: var(--color-light-grey);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    .card__icon {
+      color: var(--color-accent);
+    }
+
+    .card__title {
+      font-size: var(--font-size-l);
+      margin: 1.5rem 0 0.5rem 0;
+    }
+
+    .card__text {
+    }
   }
 }
