@@ -32,6 +32,7 @@ img {
   --color-light-grey: #f8f9fa;
   --color-grey: #666;
   --color-placeholder: #a2a9b0;
+  --color-disable: #ccc;
 
   --font-size-s: 0.875rem;
   --font-size-m: 1rem;
@@ -101,6 +102,18 @@ p {
     border-color: var(--color-light);
     color: var(--color-light);
   }
+
+  &.button--tab {
+    border: 0;
+    border-bottom: 2px solid var(--color-accent);
+    border-radius: 0;
+    color: var(--color-dark);
+    padding-right: 3rem;
+    padding-left: 3rem;
+    font-size: 1.125rem;
+    font-family: var(--font-family-1);
+    font-weight: 600;
+  }
 }
 
 /* HUVUDLAYOUT */
@@ -112,7 +125,8 @@ p {
 .hero,
 .features,
 .stats,
-.get-started {
+.get-started,
+.app-features {
   display: grid;
   grid-template-columns: var(--grid-container);
 }
@@ -121,7 +135,8 @@ p {
 .hero__inner,
 .features__inner,
 .stats__inner,
-.get-started__inner {
+.get-started__inner,
+.app-features__inner {
   grid-column: inner;
 }
 
@@ -415,5 +430,87 @@ p {
   .testimonial__author {
     font-weight: 700;
     color: var(--color-dark);
+  }
+}
+
+/* App Features */
+
+.app-features {
+  .app-features__inner {
+    padding: var(--spacing-section);
+  }
+}
+
+.tabs {
+  display: grid;
+  gap: 5rem;
+  .tabs__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tabs__item:not(.tabs__item--active) {
+    .button--tab {
+      border-color: transparent;
+      color: var(--color-disable);
+    }
+  }
+
+  .tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.5rem;
+
+    .tab__col {
+      &:nth-child(2) {
+        justify-items: center;
+      }
+
+      &:nth-child(3) {
+        align-content: end;
+      }
+    }
+
+    .tab__title {
+      font-size: var(--font-size-2xl);
+      margin-bottom: 2rem;
+    }
+
+    .tab__desc {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.icon-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .icon-list__item {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .icon-list__title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-l);
+  }
+
+  .icon-list__desc {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .icon-list__icon {
+    color: var(--color-accent);
   }
 }
