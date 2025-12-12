@@ -126,7 +126,8 @@ p {
 .features,
 .stats,
 .get-started,
-.app-features {
+.app-features,
+.testimonials {
   display: grid;
   grid-template-columns: var(--grid-container);
 }
@@ -136,7 +137,8 @@ p {
 .features__inner,
 .stats__inner,
 .get-started__inner,
-.app-features__inner {
+.app-features__inner,
+.testimonials__inner {
   grid-column: inner;
 }
 
@@ -437,7 +439,7 @@ p {
 
 .app-features {
   .app-features__inner {
-    padding: var(--spacing-section);
+    padding: var(--spacing-section) 0;
   }
 }
 
@@ -512,5 +514,111 @@ p {
 
   .icon-list__icon {
     color: var(--color-accent);
+  }
+}
+
+/* Testimonials */
+
+.testimonials {
+  background-color: var(--color-dark-blue);
+
+  .testimonials__inner {
+    padding: var(--spacing-section) 0;
+    display: grid;
+    gap: 3rem;
+  }
+
+  .testimonials__top {
+    display: flex;
+    justify-content: center;
+  }
+
+  .testimonials__title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-light);
+    margin: 0;
+    max-width: 35rem;
+    text-align: center;
+  }
+
+  .testimonials__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .testimonial {
+    max-width: 100%;
+    text-align: center;
+    padding: 2.5rem;
+    min-height: unset;
+
+    &:has(.testimonial__image) {
+      text-align: left;
+
+      display: flex;
+      gap: 1.5rem;
+
+      .testimonial__container {
+        align-self: center;
+      }
+
+      .testimonial__rating {
+        order: unset;
+        justify-content: flex-start;
+      }
+
+      .testimonial__content {
+        margin: 0.5rem 0;
+      }
+    }
+
+    .testimonial__image {
+      min-width: 240px;
+      flex-shrink: 0;
+      background-color: var(--color-placeholder);
+    }
+
+    .testimonial__content {
+      margin: 0.5rem 1.5rem;
+    }
+
+    .testimonial__title {
+      font-size: var(--font-size-l);
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .testimonial__footer {
+      /* placera längst ner genom att sätta order så högt som möjligt */
+      order: 10;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .testimonial__placeholder {
+      width: 40px;
+      height: 40px;
+    }
+
+    .testimonial__credits {
+      text-align: left;
+      gap: 0;
+    }
+
+    .testimonial__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonial__rating {
+      order: 8;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+    }
   }
 }
