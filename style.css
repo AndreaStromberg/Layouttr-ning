@@ -127,7 +127,8 @@ p {
 .stats,
 .get-started,
 .app-features,
-.testimonials {
+.testimonials,
+.partners {
   display: grid;
   grid-template-columns: var(--grid-container);
 }
@@ -138,7 +139,8 @@ p {
 .stats__inner,
 .get-started__inner,
 .app-features__inner,
-.testimonials__inner {
+.testimonials__inner,
+.partners__inner {
   grid-column: inner;
 }
 
@@ -619,6 +621,34 @@ p {
       gap: 0.5rem;
       color: var(--color-accent);
       margin-bottom: 1.5rem;
+    }
+  }
+}
+
+/* Partners*/
+.partners {
+  background-color: var(--color-dark-blue);
+
+  .partners__inner {
+    padding: var(--spacing-section) 0;
+  }
+
+  .partners__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .partners__link {
+    opacity: 0.4;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 1;
     }
   }
 }
