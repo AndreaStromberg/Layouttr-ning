@@ -36,10 +36,13 @@ img {
 
   --font-size-s: 0.875rem;
   --font-size-m: 1rem;
-  --font-size-l: 1.5rem;
+  --font-size-l: clamp(1.125rem, 1.1055rem + 0.0822vw, 1.5rem);
+
   --font-size-xl: 2rem;
   --font-size-2xl: 3rem;
-  --font-size-3xl: 4rem;
+  /* --font-size-3xl: 4rem; */
+  /* clampvärde för att denna storlek ska fungera bra responsivt */
+  --fontsize-3xl: clamp(3rem, 2.9479rem + 0.2192vw, 4rem);
 
   --grid-container: [full-start] minmax(32px, 1fr) [inner-start]
     minmax(0, 77.5rem) [inner-end] minmax(32px, 1fr) [full-end];
@@ -195,6 +198,36 @@ p {
     text-decoration: none;
     color: var(--color-light);
   }
+
+  .menu__button {
+    /* nollställer */
+    background: none;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+
+    color: var(--color-light);
+    display: none;
+  }
+
+  /* media-querys för meny */
+  @media screen and (max-width: 1024px) {
+    gap: 2rem;
+
+    .menu__list {
+      display: none;
+    }
+
+    .menu__button {
+      display: inline-block;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .button {
+      display: none;
+    }
+  }
 }
 
 /* Hero */
@@ -207,7 +240,7 @@ p {
   .hero__inner {
     padding: 5rem 0;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 
     /* space-between gör att boxarna i hero__inner hamnar så långt ifrån varandra som det går. Gap garanterar att det alltid är minst 5rem mellanrum, och att boxarna förminstkar sig istället om utrymmet är litet.  */
     justify-content: space-between;
@@ -233,7 +266,7 @@ p {
     /* inställningar för att bilden ska vara max 504px men alltid breda ut sig så mycket det går */
     max-width: 504px;
     width: 100%;
-    aspect-ratio: 5/6;
+    aspect-ratio: 4/5;
 
     /* Överkurs för att vara säker på att bilder man lägger in i placeholdern täcker och får rätt dimensioner */
     img {
@@ -261,6 +294,41 @@ p {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+  }
+
+  /* media-querys för hero */
+  @media screen and (max-width: 1024px) {
+    .hero__inner {
+      flex-direction: column;
+
+      align-items: flex-start;
+    }
+
+    .hero__image {
+      max-width: 100%;
+      aspect-ratio: 16/9;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .button__text {
+      .hero__inner {
+        grid-column: full;
+        padding-bottom: 0;
+      }
+
+      .hero__content {
+        padding: 0 32px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    .hero__image {
+      aspect-ratio: 1/1;
+    }
   }
 }
 
