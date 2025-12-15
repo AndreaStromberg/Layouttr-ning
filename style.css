@@ -44,6 +44,9 @@ img {
   --grid-container: [full-start] minmax(32px, 1fr) [inner-start]
     minmax(0, 77.5rem) [inner-end] minmax(32px, 1fr) [full-end];
 
+  --grid-container-small: [full-start] minmax(32px, 1fr) [inner-start]
+    minmax(0, 64rem) [inner-end] minmax(32px, 1fr) [full-end];
+
   --header-height: 140px;
 
   /* avstånd som ska vara i toppen och botten på varje sektion */
@@ -133,6 +136,11 @@ p {
   grid-template-columns: var(--grid-container);
 }
 
+.cta {
+  display: grid;
+  grid-template-columns: var(--grid-container-small);
+}
+
 .site-header__inner,
 .hero__inner,
 .features__inner,
@@ -140,7 +148,8 @@ p {
 .get-started__inner,
 .app-features__inner,
 .testimonials__inner,
-.partners__inner {
+.partners__inner,
+.cta__inner {
   grid-column: inner;
 }
 
@@ -650,5 +659,44 @@ p {
     &:hover {
       opacity: 1;
     }
+  }
+}
+
+/* CTA */
+.cta {
+  background-color: var(--color-dark-blue);
+  background-image: url(assets/images/Image\ Placeholder.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -30vw;
+
+  .cta__inner {
+    padding: var(--spacing-section) 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .cta__content {
+    background: var(--color-light);
+    max-width: 500px;
+    padding: 4rem;
+    min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .cta__title {
+    font-size: var(--font-size-2xl);
+    margin: 0 0 0.5rem;
+  }
+
+  .cta__buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
   }
 }
