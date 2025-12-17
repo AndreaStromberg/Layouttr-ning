@@ -415,9 +415,10 @@
                                     d="M12 1.875C17.583 1.875 22.125 6.417 22.125 12C22.125 17.583 17.583 22.125 12 22.125C6.417 22.125 1.875 17.583 1.875 12C1.875 6.417 6.417 1.875 12 1.875ZM12 4.125C7.658 4.125 4.125 7.658 4.125 12C4.125 16.342 7.658 19.875 12 19.875C16.342 19.875 19.875 16.342 19.875 12C19.875 7.658 16.342 4.125 12 4.125ZM17.7949 9.79492L11 16.5908L7.20508 12.7949L8.79492 11.2051L11 13.4092L16.2051 8.20508L17.7949 9.79492Z"
                                     fill="currentColor" />
                             </svg>
+                            <span class="button__text"><span>View on </span>App Store</span>
 
-                            <span>View on App store</span>
                         </a>
+
 
                         <a href="" class="button button--light">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -427,7 +428,10 @@
                                     fill="currentColor" />
                             </svg>
 
-                            <span>View on Google Play</span>
+                            <span class="button__text"><span>View on </span>Google Play</span>
+
+
+
                         </a>
 
                     </div>
@@ -911,7 +915,7 @@
                                     d="M12 1.875C17.583 1.875 22.125 6.417 22.125 12C22.125 17.583 17.583 22.125 12 22.125C6.417 22.125 1.875 17.583 1.875 12C1.875 6.417 6.417 1.875 12 1.875ZM12 4.125C7.658 4.125 4.125 7.658 4.125 12C4.125 16.342 7.658 19.875 12 19.875C16.342 19.875 19.875 16.342 19.875 12C19.875 7.658 16.342 4.125 12 4.125ZM17.7949 9.79492L11 16.5908L7.20508 12.7949L8.79492 11.2051L11 13.4092L16.2051 8.20508L17.7949 9.79492Z"
                                     fill="currentColor" />
                             </svg>
-                            <span class="button__text">View on App Store</span>
+                            <span class="button__text"><span>View on </span>App Store</span>
 
                         </button>
 
@@ -924,7 +928,7 @@
                                     fill="currentColor" />
                             </svg>
 
-                            <span class="button__text">View on Google Play</span>
+                            <span class="button__text"><span>View on </span>Google Play</span>
 
                         </button>
                     </div>
@@ -1030,43 +1034,49 @@
                         </ul>
                     </div>
                     <!-- Björn lägger både service och company i en gemensam nav-->
-                    <div class="site-footer__service">
+                    <div class="site-footer__service-and-company">
 
-                        <!-- Här ska egentligen vara en nav med klassnamn t.ex. menu som både h3 och listan ska ligga i.  -->
-                        <h3 class="service__title">Service</h3>
+                        <div class="site-footer__service">
+                            <!-- Här ska egentligen vara en nav med klassnamn t.ex. menu som både h3 och listan ska ligga i.  -->
+                            <h3 class="service__title">Service</h3>
 
-                        <!-- Lista med servicegrejer -->
-                        <ul class="service__list">
+                            <!-- Lista med servicegrejer -->
+                            <ul class="service__list">
 
-                            <!-- Ska egentligen vara länkar i listitemen, a -->
-                            <li class="service__item">Illustration</li>
-                            <li class="service__item">Mobile Design</li>
-                            <li class="service__item">Motion Graphic</li>
-                            <li class="service__item">Web Design</li>
-                            <li class="service__item">Development</li>
-                            <li class="service__item">SEO</li>
-                        </ul>
+                                <!-- Ska egentligen vara länkar i listitemen, a -->
+                                <li class="service__item">Illustration</li>
+                                <li class="service__item">Mobile Design</li>
+                                <li class="service__item">Motion Graphic</li>
+                                <li class="service__item">Web Design</li>
+                                <li class="service__item">Development</li>
+                                <li class="service__item">SEO</li>
+                            </ul>
+                        </div>
+
+                        <div class="site-footer__company">
+
+                            <!-- Här ska egentligen vara en nav med klassnamn t.ex. menu som både h3 och listan ska ligga i.  -->
+
+                            <h3 class="company__title">Company</h3>
+
+                            <!-- lista med grejer om företaget -->
+                            <ul class="company__list">
+
+                                <!-- Ska egentligen vara länkar i listitemen, a -->
+
+                                <li class="company__item">Features</li>
+                                <li class="company__item">Our Team</li>
+                                <li class="company__item">Portfolio</li>
+                                <li class="company__item">Blog</li>
+                                <li class="company__item">Contact Us</li>
+                            </ul>
+                        </div>
+
+
 
                     </div>
 
-                    <div class="site-footer__company">
 
-                        <!-- Här ska egentligen vara en nav med klassnamn t.ex. menu som både h3 och listan ska ligga i.  -->
-
-                        <h3 class="company__title">Company</h3>
-
-                        <!-- lista med grejer om företaget -->
-                        <ul class="company__list">
-
-                            <!-- Ska egentligen vara länkar i listitemen, a -->
-
-                            <li class="company__item">Features</li>
-                            <li class="company__item">Our Team</li>
-                            <li class="company__item">Portfolio</li>
-                            <li class="company__item">Blog</li>
-                            <li class="company__item">Contact Us</li>
-                        </ul>
-                    </div>
 
                     <div class="site-footer__social">
                         <h3 class="social__title">Our social media</h3>

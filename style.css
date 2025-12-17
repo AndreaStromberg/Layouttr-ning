@@ -39,7 +39,7 @@ img {
   --font-size-l: clamp(1.125rem, 1.1055rem + 0.0822vw, 1.5rem);
 
   --font-size-xl: 2rem;
-  --font-size-2xl: 3rem;
+  --font-size-2xl: clamp(2.25rem, -0.6rem + 12vw, 3rem);
   /* --font-size-3xl: 4rem; */
   /* clampvärde för att denna storlek ska fungera bra responsivt */
   --fontsize-3xl: clamp(3rem, 2.9479rem + 0.2192vw, 4rem);
@@ -119,6 +119,14 @@ p {
     font-size: 1.125rem;
     font-family: var(--font-family-1);
     font-weight: 600;
+  }
+
+  @media screen and (max-width: 480px) {
+    .button__text {
+      span {
+        display: none;
+      }
+    }
   }
 }
 
@@ -311,19 +319,13 @@ p {
   }
 
   @media screen and (max-width: 480px) {
-    .button__text {
-      .hero__inner {
-        grid-column: full;
-        padding-bottom: 0;
-      }
+    .hero__inner {
+      grid-column: full;
+      padding-bottom: 0;
+    }
 
-      .hero__content {
-        padding: 0 32px;
-      }
-
-      span {
-        display: none;
-      }
+    .hero__content {
+      padding: 0 32px;
     }
 
     .hero__image {
@@ -358,6 +360,7 @@ p {
   .features__cards {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .features__cta {
@@ -371,6 +374,9 @@ p {
     display: flex;
     flex-direction: column;
 
+    /* shorthand för flex-grow, flex-shrink, och flex-basis. Använder det för att ange hur mycket korten får förstora och förminska sig och hur stora de som minst ska vara.  */
+    flex: 1 1 300px;
+
     .card__icon {
       color: var(--color-accent);
     }
@@ -382,6 +388,10 @@ p {
 
     .card__text {
     }
+  }
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
   }
 }
 
@@ -421,6 +431,24 @@ p {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
   }
+
+  @media screen and (max-width: 1024px) {
+    .stats__top {
+      .stats__top {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stats__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .stats__grid {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 .stat {
@@ -435,7 +463,7 @@ p {
   gap: 0.5rem;
 
   .stat__data {
-    font-size: 3rem;
+    font-size: clamp(2.25rem, 0.9545rem + 5.4545vw, 3rem);
     font-weight: 700;
     color: var(--color-dark);
   }
@@ -447,6 +475,18 @@ p {
 
     .stat__data {
       color: var(--color-light);
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 2.25rem 1.5rem;
+
+    &:nth-child(4) {
+      order: 1;
+    }
+
+    .stat__label {
+      font-size: var(--font-size-s);
     }
   }
 }
@@ -483,6 +523,14 @@ p {
     margin-top: 2.5rem;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 900px) {
+    .get-started__inner {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 }
 
@@ -513,6 +561,15 @@ p {
   .testimonial__author {
     font-weight: 700;
     color: var(--color-dark);
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 1.75rem 2rem 2rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    max-width: 100%;
+    min-height: unset;
   }
 }
 
@@ -564,6 +621,77 @@ p {
 
     .tab__desc {
       margin-bottom: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .tab {
+      grid-template-columns: 1fr 1fr;
+
+      .tab__col {
+        &:last-child {
+          grid-column: span 2;
+        }
+      }
+
+      .icon-list {
+        flex-direction: row;
+      }
+
+      .icon-list__item {
+        flex: 1 1 200px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    .tab__title {
+      font-size: clamp(2.25rem, 1.5714rem + 2.8571vw, 3rem);
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    justify-items: center;
+    gap: 3rem;
+    position: relative;
+
+    .tabs__list {
+      flex-direction: column;
+
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.9);
+
+      width: 100%;
+      align-items: center;
+      padding: 0.5rem 0;
+    }
+
+    .tab {
+      grid-template-columns: 1fr;
+      text-align: center;
+      justify-items: center;
+
+      /* måste ställa om inställningen på den sista kolumnen som vi tidigare satte till span 2, för att den inte ska tvinga hela 
+      ektionen att fortsätta vara 2 kolumenr */
+      .tab__col {
+        &:last-child {
+          grid-column: unset;
+        }
+      }
+
+      .tab__content {
+        max-width: 28.75rem;
+      }
+
+      .icon-list {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .icon-list__item {
+        max-width: 20rem;
+      }
     }
   }
 }
@@ -702,6 +830,41 @@ p {
       margin-bottom: 1.5rem;
     }
   }
+
+  @media screen and (max-width: 1170px) {
+    .testimonials__content {
+      grid-template-columns: 1fr 1fr;
+      max-width: 50rem;
+      margin: 0 auto;
+
+      .testimonial {
+        &:first-child {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .testimonials__content {
+      grid-template-columns: 1fr;
+
+      .testimonial {
+        &:first-child {
+          grid-column: unset;
+        }
+      }
+
+      .testimonial__image {
+        display: none;
+      }
+
+      /* .testimonial__rating {
+        order: unset;
+        justify-content: flex-start;
+      } */
+    }
+  }
 }
 
 /* Partners*/
@@ -720,7 +883,12 @@ p {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    /* flex-wrap: wrap; */
   }
+
+  /* .partners__item {
+    min-width: 160px;
+  } */
 
   .partners__link {
     opacity: 0.4;
@@ -728,6 +896,38 @@ p {
 
     &:hover {
       opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    .partners__inner {
+      padding-top: 0;
+    }
+    .partners__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      /* Björns förslag eventuellt: */
+      /* grid-template-columns: repeat(auto-fit, minmax(160px 1fr));
+      gap: 2rem;
+      justify-content: center; */
+
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 670px) {
+    .partners__list {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+
+      .partners__item {
+        min-width: 160px;
+      }
     }
   }
 }
@@ -769,6 +969,25 @@ p {
     display: flex;
     gap: 1rem;
   }
+
+  @media screen and (max-width: 900px) {
+    background-position: 0vw;
+
+    .cta__inner {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .cta__inner {
+      padding: 2rem;
+    }
+
+    .cta__buttons {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 }
 
 /* Footer */
@@ -789,7 +1008,9 @@ p {
 
   .site-footer__main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
   }
 
   .site-footer__logo {
@@ -821,6 +1042,11 @@ p {
     margin-left: auto;
   } */
 
+  .site-footer__service-and-company {
+    display: flex;
+    gap: 5rem;
+  }
+
   /* Björn gör istället inställningarna på ul, innuti site-footer, och gör istället en separat inställning för social som inte ska ha samma inställning */
   .service__list,
   .company__list {
@@ -829,6 +1055,7 @@ p {
     line-height: 150%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 
@@ -836,6 +1063,7 @@ p {
   .company__title,
   .social__title {
     margin-bottom: 2rem;
+    text-align: center;
   }
 }
 
