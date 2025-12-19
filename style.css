@@ -170,11 +170,18 @@ p {
 
 .site-header {
   height: var(--header-height);
-  position: absolute; /*Ändra till fixed senare*/
+  background-color: var(--color-dark-blue);
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
+  transform: translateY(0);
+  transition: all 1.2s;
+
+  &:not(.site-header--inverted).site-header--hidden {
+    transform: translateY(-100%);
+  }
 
   .site-header__inner {
     display: flex;
@@ -187,6 +194,7 @@ p {
   }
 
   &.site-header--inverted {
+    background-color: var(--color-light);
     .branding {
       color: var(--color-dark);
     }
