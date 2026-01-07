@@ -804,6 +804,10 @@ p {
     margin-bottom: 1rem;
   }
 
+  .tab--current {
+    font-weight: 900;
+  }
+
   /* .testimonials__content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
