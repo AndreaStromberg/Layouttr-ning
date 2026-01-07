@@ -800,11 +800,11 @@ p {
     text-align: center;
   }
 
-  .testimonials__content {
+  /* .testimonials__content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 1rem;
-  }
+  } */
 
   .testimonial {
     max-width: 100%;
@@ -879,6 +879,10 @@ p {
       color: var(--color-accent);
       margin-bottom: 1.5rem;
     }
+  }
+
+  .testimonial:not(.testimonial--current) {
+    display: none;
   }
 
   @media screen and (max-width: 1170px) {

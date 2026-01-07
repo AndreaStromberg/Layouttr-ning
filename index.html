@@ -20,6 +20,8 @@
     <!-- Scripts -->
     <script src="js/menu.js" defer></script>
     <script src="js/headerScroll.js" defer></script>
+    <script src="js/tabsAppFeatures.js" defer></script>
+
 
 </head>
 
@@ -608,276 +610,290 @@
 
                 <div class="testimonials__content">
 
-                    <!-- card 1 - samma klassnamn som längre upp på sidan, kan återanvända en del av de inställningarna -->
-                    <div class="testimonial">
-                        <figure class="testimonial__image">
 
-                        </figure>
 
-                        <div class="testimonial__container">
-                            <!-- Rating -->
-                            <div class="testimonial__rating">
+                    <nav class="tabs__buttons">
+                        <button class="tab tab--current" data-tab-id="1">Tab 1</button>
+                        <button class="tab" data-tab-id="2">Tab 2</button>
+                        <button class="tab" data-tab-id="3">Tab 3</button>
+                    </nav>
 
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
+
+                    <div class="tabs__content">
+
+
+                        <!-- card 1 - samma klassnamn som längre upp på sidan, kan återanvända en del av de inställningarna -->
+                        <div class="testimonial testimonial--current" data-tab-id="1">
+                            <figure class="testimonial__image">
+
+                            </figure>
+
+                            <div class="testimonial__container">
+                                <!-- Rating -->
+                                <div class="testimonial__rating">
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
 
                                 </div>
 
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
+                                <!-- Rubrik -->
+                                <h3 class="testimonial__title">Great design number 1</h3>
+
+
+                                <!-- Content -->
+                                <p class="testimonial__content">I am very helped in making a
+                                    website and business development
+                                    that makes the product that I have
+                                    to have a quality for use by the user</p>
+
+
+                                <!-- Testimonial footer / Författare -->
+                                <div class="testimonial__footer">
+                                    <figure class="testimonial__placeholder">
+
+                                    </figure>
+
+                                    <div class="testimonial__credits">
+                                        <div class="testimonial__author">Clay Johnson</div>
+                                        <div class="testimonial__position">Business Director</div>
+
+                                    </div>
 
                                 </div>
 
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
 
-                                </div>
-
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
-
-                                </div>
-
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
-
-                                </div>
 
                             </div>
-
-                            <!-- Rubrik -->
-                            <h3 class="testimonial__title">Great design</h3>
-
-
-                            <!-- Content -->
-                            <p class="testimonial__content">I am very helped in making a
-                                website and business development
-                                that makes the product that I have
-                                to have a quality for use by the user</p>
-
-
-                            <!-- Testimonial footer / Författare -->
-                            <div class="testimonial__footer">
-                                <figure class="testimonial__placeholder">
-
-                                </figure>
-
-                                <div class="testimonial__credits">
-                                    <div class="testimonial__author">Clay Johnson</div>
-                                    <div class="testimonial__position">Business Director</div>
-
-                                </div>
-
-                            </div>
-
-
 
                         </div>
 
-                    </div>
-
-                    <!-- card 2 - samma klassnamn som längre upp på sidan, kan återanvända en del av de inställningarna -->
-                    <div class="testimonial">
+                        <!-- card 2 - samma klassnamn som längre upp på sidan, kan återanvända en del av de inställningarna -->
+                        <div class="testimonial" data-tab-id="2">
 
 
-                        <div class="testimonial__container">
-                            <!-- Rating -->
-                            <div class="testimonial__rating">
+                            <div class="testimonial__container">
+                                <!-- Rating -->
+                                <div class="testimonial__rating">
 
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
 
                                 </div>
 
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
+                                <!-- Rubrik -->
+                                <h3 class="testimonial__title">Great design number 2</h3>
+
+
+                                <!-- Content -->
+                                <p class="testimonial__content">I am very helped in making a
+                                    website and business development
+                                    that makes the product that I have
+                                    to have a quality for use by the user</p>
+
+
+                                <!-- Testimonial footer / Författare -->
+                                <div class="testimonial__footer">
+                                    <figure class="testimonial__placeholder">
+
+                                    </figure>
+
+                                    <div class="testimonial__credits">
+                                        <div class="testimonial__author">Clay Johnson</div>
+                                        <div class="testimonial__position">Business Director</div>
+
+                                    </div>
 
                                 </div>
 
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
 
-                                </div>
-
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
-
-                                </div>
-
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
-
-                                </div>
 
                             </div>
-
-                            <!-- Rubrik -->
-                            <h3 class="testimonial__title">Great design</h3>
-
-
-                            <!-- Content -->
-                            <p class="testimonial__content">I am very helped in making a
-                                website and business development
-                                that makes the product that I have
-                                to have a quality for use by the user</p>
-
-
-                            <!-- Testimonial footer / Författare -->
-                            <div class="testimonial__footer">
-                                <figure class="testimonial__placeholder">
-
-                                </figure>
-
-                                <div class="testimonial__credits">
-                                    <div class="testimonial__author">Clay Johnson</div>
-                                    <div class="testimonial__position">Business Director</div>
-
-                                </div>
-
-                            </div>
-
-
 
                         </div>
 
-                    </div>
-
-                    <!-- card 3 - samma klassnamn som längre upp på sidan, kan återanvända en del av de inställningarna -->
-                    <div class="testimonial">
+                        <!-- card 3 - samma klassnamn som längre upp på sidan, kan återanvända en del av de inställningarna -->
+                        <div class="testimonial" data-tab-id="3">
 
 
-                        <div class="testimonial__container">
-                            <!-- Rating -->
-                            <div class="testimonial__rating">
+                            <div class="testimonial__container">
+                                <!-- Rating -->
+                                <div class="testimonial__rating">
 
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
+
+                                    <div class="star">
+                                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
+                                                fill="currentColor" />
+                                        </svg>
+
+                                    </div>
 
                                 </div>
 
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
+                                <!-- Rubrik -->
+                                <h3 class="testimonial__title">Great design number 3</h3>
+
+
+                                <!-- Content -->
+                                <p class="testimonial__content">I am very helped in making a
+                                    website and business development
+                                    that makes the product that I have
+                                    to have a quality for use by the user</p>
+
+
+                                <!-- Testimonial footer / Författare -->
+                                <div class="testimonial__footer">
+                                    <figure class="testimonial__placeholder">
+
+                                    </figure>
+
+                                    <div class="testimonial__credits">
+                                        <div class="testimonial__author">Clay Johnson</div>
+                                        <div class="testimonial__position">Business Director</div>
+
+                                    </div>
 
                                 </div>
 
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
 
-                                </div>
-
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
-
-                                </div>
-
-                                <div class="star">
-                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4127 0L14.1069 8.2918H22.8254L15.7719 13.4164L18.4661 21.7082L11.4127 16.5836L4.35927 21.7082L7.05343 13.4164L1.14441e-05 8.2918H8.71852L11.4127 0Z"
-                                            fill="currentColor" />
-                                    </svg>
-
-                                </div>
 
                             </div>
-
-                            <!-- Rubrik -->
-                            <h3 class="testimonial__title">Great design</h3>
-
-
-                            <!-- Content -->
-                            <p class="testimonial__content">I am very helped in making a
-                                website and business development
-                                that makes the product that I have
-                                to have a quality for use by the user</p>
-
-
-                            <!-- Testimonial footer / Författare -->
-                            <div class="testimonial__footer">
-                                <figure class="testimonial__placeholder">
-
-                                </figure>
-
-                                <div class="testimonial__credits">
-                                    <div class="testimonial__author">Clay Johnson</div>
-                                    <div class="testimonial__position">Business Director</div>
-
-                                </div>
-
-                            </div>
-
-
 
                         </div>
 
