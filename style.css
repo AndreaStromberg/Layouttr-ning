@@ -800,6 +800,10 @@ p {
     text-align: center;
   }
 
+  .tabs__buttons {
+    margin-bottom: 1rem;
+  }
+
   /* .testimonials__content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;

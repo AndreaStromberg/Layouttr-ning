@@ -1,6 +1,6 @@
 const tabs = () => {
   // hämta alla tabknapparna från DOM
-  const tabButtons = querySelectorAll(".tab")
+  const tabButtons = document.querySelectorAll(".tab")
 
   // Hämta alla korten från DOM
   const tabTestimonials = document.querySelectorAll(".testimonial")
@@ -11,7 +11,7 @@ const tabs = () => {
     const currentTab = event.target
 
     // få ut tab-id från klickade knappen
-    const currentTabId = event.target.dataset.currentTabId
+    const currentTabId = event.target.dataset.tabId
 
     // Få ut rätt kort med samma id som den klickade knappen
     const currentTestimonial = document.querySelector(
